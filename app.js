@@ -1,7 +1,7 @@
 /**
  * 
  * @param {string} name
- * @returns {string} 
+ * @returns {string | null} 
  */
 function getCookie(name) {
   const cookies = document.cookie.split('; ');
@@ -14,5 +14,3 @@ function getCookie(name) {
 
   return decodeURIComponent(value);
 }
-
-console.log(getCookie('baba'));
