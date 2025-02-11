@@ -14,3 +14,17 @@ function getCookie(name) {
 
   return decodeURIComponent(value);
 }
+
+/**
+ * 
+ * @param {string} name 
+ * @param {string} value 
+ * @param {number} days 
+ */
+function setCookie(name, value, days){
+  const date = new Date();
+  date.setDate(date.getDate() + days);
+  document.cookie = `${name}=${encodeURIComponent(value)}; expires=${date.toUTCString()};`;
+}
+
+
